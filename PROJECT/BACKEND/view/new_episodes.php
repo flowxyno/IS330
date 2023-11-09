@@ -2,6 +2,8 @@
     require_once('util/secure_conn.php');  // require a secure connection
     require_once('util/valid_admin.php');  // require a valid admin user
 
+    $showModal = false;
+
     if (isset($_POST['new_episodes'])) {
         // Database connection
         include "model/database.php";
@@ -22,8 +24,8 @@
 
         $statement->execute();
 
-        echo '<script>alert("Episode added successfully");</script>';
-    
+        $showModal = true;
+        
         // Close the database connection
         $statement->closeCursor(); 
     }
@@ -54,6 +56,9 @@
                 <div class="nav-menu">
                     <?php 
                         include 'util/nav_menu.php';
+
+                        if($showModal)
+                            echo "<script>openModal('New episode added successfully!')</script>"
                     ?>
                 </div>
                 <div class="form-container">
