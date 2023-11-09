@@ -84,7 +84,9 @@
 
                                 // Display tagNames as options for the dropdown menu
                                 while ($row = $seriesResult->fetch()) {
-                                    echo "<option value='" . $row['seriesID'] . "'>" . $row['seriesName'] . "</option>";
+
+
+                                    echo "<option value='" . $row['seriesID'] . "'>" . htmlspecialchars($row['seriesName']) . "</option>";
                                 }
 
                             // Close the database connection
