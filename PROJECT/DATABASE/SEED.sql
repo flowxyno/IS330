@@ -28,7 +28,7 @@ ALTER TABLE series auto_increment = 1;
 INSERT INTO series (seriesName, synop, coverArt)
 	VALUES
 		('Ghost Hunt', 'Telling ghost stories is a favourite pastime of Taniyama Mai and her friends — that is, until she meets 17-year-old Shibuya Kazuya, sent by the Shibuya Psychic Research Centre to investigate paranormal activity at a supposedly haunted school. When Mai gets caught in a dangerous situation, she is rescued by Kazuyas assistant. Saving her lands the assistant incapacitated, and Kazuya demands that Mai become his assistant instead...', 'http:\\www.notreallythere.com'),
-        ('Tresse', 'Set in Manila where the mythical creatures of Philippine folklore live in hiding amongst humans, Alexandra Trese finds herself going head to head with a criminal underworld comprised of malevolent supernatural beings.', 'http:\\www.notreallythere.com'),
+        ('Tresse', 'Set in Manila where the mythical creatures of Philippine folklore live in hiding amongst humans, Alexandra Trese finds herself going head to head with a criminal underworld comprised of malevolent supernatural beings.', 'https://www.imdb.com/title/tt9310336/mediaviewer/rm168819201/?ref_=tt_ov_i'),
         ('Star Wars: Ahsoka', 'After the fall of the Galactic Empire, former Jedi Knight Ahsoka Tano investigates an emerging threat to a vulnerable galaxy.', 'http:\\www.notreallythere.com')
 ;
     

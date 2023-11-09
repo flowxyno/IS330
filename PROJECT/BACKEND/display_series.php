@@ -1,3 +1,8 @@
+<?php 
+    require_once('util/secure_conn.php');  // require a secure connection
+    require_once('util/valid_admin.php');  // require a valid admin user
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +12,10 @@
 
     <?php
     // Include the database connection code
-    include "db_connection.php";
+    include "model/database.php";
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $selectedUserID = $_POST['user'];
+        $selectedUserID = $_SESSION['logged_in_userID'];
 
         //queries that DB  for all of the column data in reference to the passed in userID
         $usernamequery = "SELECT * FROM users
