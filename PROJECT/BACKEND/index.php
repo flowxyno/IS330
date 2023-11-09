@@ -26,6 +26,19 @@ switch($action) {
         $password = filter_input(INPUT_POST, 'password');
         if (is_valid_admin_login($username, $password)) {
             $_SESSION['is_valid_admin'] = true;
+            // storing the logged in userName into the session
+            $_SESSION['logged_in_userName'] = $username;
+
+            // Extracting the userID and firstName from the provided userName and storing it as user_ID & first_name
+            $statement = $db->prepare("SELECT * FROM users WHERE userName = :userName");
+            $statement->bindParam(":userName", $username);
+            $statement->execute();
+            $row = $statement->fetch();
+            $user_ID = $row["userID"]; 
+            $_SESSION['logged_in_userID'] = $user_ID;
+            $first_name = $row["firstName"]; 
+            $_SESSION['logged_in_firstName'] = $first_name;
+
             include('view/main_menu.php');
         } else {
             $login_message = 'You must login to view this page.';
@@ -44,8 +57,8 @@ switch($action) {
     case 'show_new_episodes':
         include('view/new_episodes.php');
         break;
-    case 'show_series_database':
-        include('view/series_database.php');
+    case 'show_display_series':
+        include('display_series.php');
         break;
     case 'logout':
         $_SESSION = array();   // Clear all session data from memory
