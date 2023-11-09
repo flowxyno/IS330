@@ -1,7 +1,7 @@
 USE leftoff;
 
 -- inserting data into the users table
-DELETE FROM users;
+-- DELETE FROM users;
 ALTER TABLE users auto_increment = 1;
 INSERT INTO users (firstName, lastName, userName, passwordHash)
 	VALUES
@@ -13,7 +13,7 @@ INSERT INTO users (firstName, lastName, userName, passwordHash)
 ;
     
 -- inserting data into the tags table
-DELETE FROM tags;
+-- DELETE FROM tags;
 ALTER TABLE tags auto_increment = 1;
 INSERT INTO tags (tagname)
 	VALUES
@@ -23,7 +23,7 @@ INSERT INTO tags (tagname)
 ;
     
     -- inserting data into the series table
-DELETE FROM series;
+-- DELETE FROM series;
 ALTER TABLE series auto_increment = 1;
 INSERT INTO series (seriesName, synop, coverArt)
 	VALUES
@@ -33,7 +33,7 @@ INSERT INTO series (seriesName, synop, coverArt)
 ;
     
 -- inserting data into the seriesTags table
-DELETE FROM seriesTags;
+-- DELETE FROM seriesTags;
 ALTER TABLE seriesTags auto_increment = 1;
 INSERT INTO seriesTags (seriesID, tagID)
 	VALUES
@@ -43,7 +43,7 @@ INSERT INTO seriesTags (seriesID, tagID)
 ;
     
 -- inserting data into the episodes table
-DELETE FROM episodes;
+-- DELETE FROM episodes;
 ALTER TABLE episodes auto_increment = 1;
 INSERT INTO episodes (seriesID, episodeNumber, episodeTitle, episodeSynop)
 	VALUES
@@ -88,7 +88,7 @@ INSERT INTO episodes (seriesID, episodeNumber, episodeTitle, episodeSynop)
 ;
     
 -- inserting data into the seriesTrackers table
-DELETE FROM seriesTrackers;
+-- DELETE FROM seriesTrackers;
 ALTER TABLE seriesTrackers auto_increment = 1;
 INSERT INTO seriesTrackers (userID, seriesID, episodeID)
 	VALUES
