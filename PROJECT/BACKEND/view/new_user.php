@@ -14,12 +14,11 @@
             $result = add_admin($fname, $lname, $username, $password);
     
             if ($result) {
-                // Admin user added successfully
-                // redirect or display a success message here
+                // Display success message
                 echo '<script>alert("User added successfully");</script>';
                 
             } else {
-                // Dispay failure message here
+                // Display failure message
                 echo '<script>alert("User Add Failed!!");</script>';
             }
    }

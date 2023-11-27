@@ -8,8 +8,7 @@ INSERT INTO users (firstName, lastName, userName, passwordHash)
 		('Tracy', 'Harvey', 'tharvey', '$2y$10$HwZ.yTiX5z8wII5YBbPzZefUC9lVMSaPIyrMZVR4JD2Ln8hPqonzW'),
         ('Starr', 'Harvey', 'sharvey', '$2y$10$HwZ.yTiX5z8wII5YBbPzZefUC9lVMSaPIyrMZVR4JD2Ln8hPqonzW'),
         ('Kelly', 'Tanner', 'ktanner', '$2y$10$HwZ.yTiX5z8wII5YBbPzZefUC9lVMSaPIyrMZVR4JD2Ln8hPqonzW'),
-        ('Scooby', 'Doo', 'sdoo', '$2y$10$HwZ.yTiX5z8wII5YBbPzZefUC9lVMSaPIyrMZVR4JD2Ln8hPqonzW'),
-        ('John', 'Doe', 'user', '$2y$10$526bKJDq7XWQSW2KK8IP6.g66DyuYFDAJ/EtXriMU2Kc6LIWhvfKG')
+        ('Scooby', 'Doo', 'sdoo', '$2y$10$HwZ.yTiX5z8wII5YBbPzZefUC9lVMSaPIyrMZVR4JD2Ln8hPqonzW')
 ;
     
 -- inserting data into the tags table
@@ -27,9 +26,9 @@ INSERT INTO tags (tagname)
 ALTER TABLE series auto_increment = 1;
 INSERT INTO series (seriesName, synop, coverArt)
 	VALUES
-		('Ghost Hunt', 'Telling ghost stories is a favourite pastime of Taniyama Mai and her friends — that is, until she meets 17-year-old Shibuya Kazuya, sent by the Shibuya Psychic Research Centre to investigate paranormal activity at a supposedly haunted school. When Mai gets caught in a dangerous situation, she is rescued by Kazuyas assistant. Saving her lands the assistant incapacitated, and Kazuya demands that Mai become his assistant instead...', 'http:\\www.notreallythere.com'),
-        ('Tresse', 'Set in Manila where the mythical creatures of Philippine folklore live in hiding amongst humans, Alexandra Trese finds herself going head to head with a criminal underworld comprised of malevolent supernatural beings.', 'https://www.imdb.com/title/tt9310336/mediaviewer/rm168819201/?ref_=tt_ov_i'),
-        ('Star Wars: Ahsoka', 'After the fall of the Galactic Empire, former Jedi Knight Ahsoka Tano investigates an emerging threat to a vulnerable galaxy.', 'http:\\www.notreallythere.com')
+		('Ghost Hunt', 'Telling ghost stories is a favourite pastime of Taniyama Mai and her friends — that is, until she meets 17-year-old Shibuya Kazuya, sent by the Shibuya Psychic Research Centre to investigate paranormal activity at a supposedly haunted school. When Mai gets caught in a dangerous situation, she is rescued by Kazuyas assistant. Saving her lands the assistant incapacitated, and Kazuya demands that Mai become his assistant instead...', 'https://cdn.archonia.com/images/1-13744201-1-1-original1/ghost-hunt-season-01-part-01-dvd-box.jpg'),
+        ('Tresse', 'Set in Manila where the mythical creatures of Philippine folklore live in hiding amongst humans, Alexandra Trese finds herself going head to head with a criminal underworld comprised of malevolent supernatural beings.', 'https://upload.wikimedia.org/wikipedia/en/2/2f/Trese_promo_poster.jpg'),
+        ('Star Wars: Ahsoka', 'After the fall of the Galactic Empire, former Jedi Knight Ahsoka Tano investigates an emerging threat to a vulnerable galaxy.', 'https://upload.wikimedia.org/wikipedia/commons/a/aa/Ahsoka.svg')
 ;
     
 -- inserting data into the seriesTags table
@@ -94,5 +93,6 @@ INSERT INTO seriesTrackers (userID, seriesID, episodeID)
 	VALUES
 		(1, 2, 28),
         (2, 3, 36),
-        (3, 1, 11)
+        (3, 1, 11),
+        (1, 3, 35)
 ;    

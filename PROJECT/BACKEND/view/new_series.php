@@ -95,7 +95,7 @@
 
                                 // Display tagNames as options for the dropdown menu
                                 while ($row = $tagResult->fetch()) {
-                                    echo "<option value='" . $row['tagID'] . "'>" . $row['tagName'] . "</option>";
+                                    echo "<option value='" . $row['tagID'] . "'>" . htmlspecialchars($row['tagName']) . "</option>";
                                 }
 
                             // Close the database connection
