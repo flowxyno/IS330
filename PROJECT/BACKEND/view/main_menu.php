@@ -80,6 +80,7 @@
         }
     </style>
     <script>
+        // This function dynamically populates the episode drop down list for adding a tracker to the table
         function updateEpisodes() {
             var seriesID = document.getElementById("series").value;
             var episodeDropdown = document.getElementById("episode");
@@ -120,7 +121,6 @@
                     ?>
                 </div>
                 <div class="form-container">
-                    
                     <!--This table contains the seriesTracker information for the logged in user-->
                     <table>
                         <thead>
@@ -164,7 +164,6 @@
                                 
                                 // Start of the seriesTracker update form
                                 echo "<form method='POST' action='index.php?action=show_main_menu'>";
-                                //echo "<input type='hidden' name='userID' value='$user_ID'>";  // uses the userID from the sessions logged in user
                                 echo "<input type='hidden' name='trackerID' value='{$row['trackerID']}'>"; //pass in the trackerID of the row you want to change
                                 echo "<input type='hidden' name='seriesID' value='{$row['seriesID']}'>"; // uses the seriesID from the current row in the loop
                                 echo "Please select the last episode you watched to update your tracker: <select name='episodeID'>";
@@ -225,7 +224,7 @@
 
                                     <label for="episode">Select Episode:</label>
                                     <select name="episodeID" id="episode">
-                                        <!-- Options will be dynamically populated using JavaScript -->
+                                        <!-- Options will be dynamically populated using JavaScript in the updateEpisodes Function -->
                                     </select>
 
                                     <br><br>

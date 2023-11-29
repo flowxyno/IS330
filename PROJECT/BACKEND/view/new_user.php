@@ -1,7 +1,7 @@
 <?php
     require_once('util/secure_conn.php');  // require a secure connection
     require_once('util/valid_admin.php');  // require a valid admin user
-    require_once('model/admin_db.php'); // require to pass data to the add_admin function
+    require_once('model/admin_db.php'); // required to pass data to the add_admin function
 
    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Capture form data
